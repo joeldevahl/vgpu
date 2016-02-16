@@ -594,6 +594,8 @@ vgpu_pipeline_t* vgpu_create_pipeline(vgpu_device_t* device, const vgpu_create_p
 	vgpu_pipeline_t* pipeline = VGPU_ALLOC_TYPE(device->allocator, vgpu_pipeline_t);
 	ZeroMemory(pipeline, sizeof(*pipeline));
 
+	pipeline->vertex_program = params->vertex_program;
+	pipeline->fragment_program = params->fragment_program;
 	pipeline->prim_type = translate_primitive_type[params->primitive_type];
 
 	D3D11_BLEND_DESC blend_desc = {
