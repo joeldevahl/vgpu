@@ -29,6 +29,7 @@ typedef enum
 	VGPU_DEVICE_DX11,
 	VGPU_DEVICE_DX12,
 	VGPU_DEVICE_GL,
+	VGPU_DEVICE_VK,
 	MAX_VGPU_DEVICE_TYPES,
 } vgpu_device_type_t;
 
